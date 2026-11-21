@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Bo'kaz – La Carte</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.p2{background:#0e4a2a}
+.frame{position:absolute;inset:0}
+.inner{position:absolute;inset:26px;border-radius:18px;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 30%,#21884a 0%,#13683a 45%,#0a3f22 100%);box-shadow:inset 0 0 0 4px #ffd23f, inset 0 0 60px rgba(0,0,0,.45)}
+.leafbg{opacity:.22;filter:saturate(.6) brightness(.7)}
+.wm2{font-family:'Lobster';font-size:150px;color:#fff6dc;line-height:1;-webkit-text-stroke:14px #3b1607;paint-order:stroke fill;
+  filter:drop-shadow(0 8px 6px rgba(0,0,0,.45));left:0;right:0;text-align:center;top:236px}
+.lacarte{left:380px;top:392px;width:480px;height:84px}
+.lacarte .t{font-family:'Kaushan Script';font-size:60px;color:var(--brown);line-height:1}
+.tag{left:0;right:0;top:482px;text-align:center;font-weight:800;font-size:25px;color:#ffe680;letter-spacing:.5px}
+.tag i{font-style:normal;color:#ff8a5c;padding:0 10px}
+.col{position:absolute;top:534px;display:flex;flex-direction:column;gap:22px}
+.card{position:relative;padding:16px 26px 22px}
+.h{height:66px;width:330px;margin:0 0 8px -12px;justify-content:flex-start;padding-left:28px;gap:12px}
+.h .ic{width:44px;flex:none}
+.h .t{font-family:'Kaushan Script';font-size:48px;color:#fff;text-shadow:0 3px 0 rgba(90,0,0,.45);line-height:1}
+.row{font-size:28px;height:48px}
+.pill{font-size:25px}
+table.bk{width:100%;border-collapse:separate;border-spacing:0 8px;font-weight:700;font-size:28px}
+table.bk th{font-family:'Caveat Brush';font-weight:400;font-size:30px;color:var(--red-d);text-align:center;padding-bottom:0}
+table.bk td:first-child{white-space:nowrap}
+table.bk td.p{text-align:center;width:118px}
+table.bk td.p .pill{min-width:92px}
+table.bk tr+tr td{border-top:3px dotted rgba(90,36,16,.35)}
+.accs{margin-top:8px;display:flex;align-items:center;gap:12px;border-radius:14px;padding:8px 14px;background:rgba(27,122,58,.12);border:2px dashed rgba(27,122,58,.55)}
+.accs .lab{font-family:'Caveat Brush';font-size:30px;line-height:1;color:var(--green)}
+.accs .v{font-weight:700;font-size:23px;line-height:1.3}
+.choices{margin-top:12px;border-radius:24px;padding:10px 18px 12px;text-align:center;
+  background:radial-gradient(ellipse at center,#fff6b8,#ffd84a 70%,#f5b800);border:3px solid #d49a00}
+.choices h3{font-family:'Kaushan Script';font-weight:400;font-size:30px;line-height:1.1}
+.choices p{font-weight:700;font-size:23px;line-height:1.38}
+.complet{margin-top:10px;border-radius:14px;padding:8px 10px;text-align:center;
+  background:linear-gradient(180deg,#e3262f,#a10d16);color:#fff;font-weight:800;font-size:23.5px;line-height:1.28;box-shadow:0 3px 6px rgba(90,0,0,.35)}
+.plat{padding:10px 0}
+.plat .top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:4px}
+.plat+.plat{border-top:3px dotted rgba(90,36,16,.35)}
+.plat b{font-size:29px;font-weight:800;line-height:1.15}
+.plat .desc{display:block;font-size:22px;font-weight:400;line-height:1.3;color:#5a2410}
+.plat .pill{font-size:32px;padding:4px 16px}
+.badge{position:absolute;right:18px;top:-18px;width:104px;height:104px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 40% 35%,#fff4a8,#ffcd2a 55%,#e8a200);border:4px solid #7a3b00;box-shadow:0 5px 10px rgba(0,0,0,.35);
+  font-family:'Bree Serif';color:var(--brown);line-height:1;transform:rotate(8deg)}
+.badge .big{font-size:38px}.badge .sm{font-size:21px}
+.list{display:grid;grid-template-columns:auto auto;gap:4px 14px}
+.list div{display:flex;align-items:center;gap:8px;font-weight:700;font-size:22.5px;white-space:nowrap;line-height:1.6}
+.list .svg{width:26px;flex:none}
+.foot{left:60px;right:60px;top:1630px;height:76px;border-radius:40px;display:flex;align-items:center;justify-content:center;gap:26px;
+  background:linear-gradient(180deg,#ffe680,#ffc21a 60%,#e8a200);border:4px solid #7a3b00;box-shadow:0 6px 12px rgba(0,0,0,.35);
+  font-weight:900;font-size:30px;color:var(--brown)}
+.foot .h2{font-family:'Caveat Brush';font-weight:400;font-size:40px;color:var(--red-d)}
+</style></head>
+<body><div class="poster p2">
+  <div class="frame madras"></div>
+  <div class="inner">
+    <!-- Feuillages en fond -->
+    <div class="abs svg leafbg" style="left:300px;top:640px;width:700px;transform:rotate(-30deg)" data-svg="palm" data-o='{"len":700,"seed":44,"dark":"#0b3a1f","mid":"#0f5a2c","light":"#1d7a3c"}'></div>
+    <div class="abs svg leafbg" style="left:200px;top:1150px;width:760px;transform:rotate(160deg)" data-svg="palm" data-o='{"len":700,"seed":45,"dark":"#0b3a1f","mid":"#0f5a2c","light":"#1d7a3c"}'></div>
+  </div>
+
+  <!-- Palmes d'angle -->
+  <div class="abs svg" style="left:-120px;top:-40px;width:520px;transform:rotate(18deg)" data-svg="palm" data-o='{"len":520,"seed":7,"bend":0.22}'></div>
+  <div class="abs svg" style="left:-60px;top:120px;width:380px;transform:rotate(-8deg)" data-svg="palm" data-o='{"len":380,"seed":9,"bend":0.3}'></div>
+  <div class="abs svg" style="left:850px;top:-40px;width:520px;transform:scaleX(-1) rotate(18deg)" data-svg="palm" data-o='{"len":520,"seed":17,"bend":0.22}'></div>
+  <div class="abs svg" style="left:920px;top:120px;width:380px;transform:scaleX(-1) rotate(-8deg)" data-svg="palm" data-o='{"len":380,"seed":19,"bend":0.3}'></div>
+  <div class="abs svg" style="left:40px;top:230px;width:150px" data-svg="hibiscus" data-o='{"color":"red","seed":3}'></div>
+  <div class="abs svg" style="left:150px;top:300px;width:100px" data-svg="hibiscus" data-o='{"color":"yellow","seed":5,"rot":20}'></div>
+  <div class="abs svg" style="left:1050px;top:230px;width:150px" data-svg="hibiscus" data-o='{"color":"red","seed":13,"rot":30}'></div>
+  <div class="abs svg" style="left:990px;top:300px;width:100px" data-svg="hibiscus" data-o='{"color":"pink","seed":15,"rot":10}'></div>
+
+  <!-- En-tête -->
+  <div class="abs logo" style="left:518px;top:38px;width:204px;height:204px"></div>
+  <div class="abs wm2">Bo'kaz</div>
+  <div class="abs svg" style="left:360px;top:200px;width:110px;transform:rotate(-16deg)" data-svg="chef"></div>
+  <div class="abs lacarte" data-brush data-o='{"seed":5,"c1":"#ffe066","c2":"#f0a800"}'><span class="t">La Carte</span></div>
+  <div class="abs tag">Saveurs des Îles<i>✿</i>Cuisine créole<i>✿</i>Bokits &amp; spécialités</div>
+
+  <!-- Colonne gauche -->
+  <div class="col" style="left:56px;width:566px">
+    <div class="card parch"><div class="noise"></div>
+      <div class="h" data-brush data-o='{"seed":3}'><div class="ic svg" data-svg="flower"></div><span class="t">Entrées</span></div>
+      <div class="row"><span class="n">Accras de morue</span><span class="dots"></span><span class="pill">4 € les 6</span></div>
+      <div class="row"><span class="n">Samoussas bœuf</span><span class="dots"></span><span class="pill">3 € les 3</span></div>
+      <div class="row"><span class="n">Wings boucanés</span><span class="dots"></span><span class="pill">4,50 € les 6</span></div>
+    </div>
+    <div class="card parch"><div class="noise"></div>
+      <div class="h" data-brush data-o='{"seed":8}'><div class="ic svg" data-svg="flower"></div><span class="t">Bokits</span></div>
+      <table class="bk">
+        <tr><th></th><th>seul</th><th>+ accomp.</th></tr>
+        <tr><td>Bokit</td><td class="p"><span class="pill">8 €</span></td><td class="p"><span class="pill">10 €</span></td></tr>
+        <tr><td>Big bokit</td><td class="p"><span class="pill">10 €</span></td><td class="p"><span class="pill">12 €</span></td></tr>
+        <tr><td>Bokit végétarien</td><td class="p"><span class="pill">8 €</span></td><td class="p"><span class="pill">10 €</span></td></tr>
+      </table>
+      <div class="accs"><span class="lab">Accompagnements<br>au choix :</span><span class="v">Patates douces • Frites<br>classiques • Aloco</span></div>
+      <div class="choices"><h3>Les choix de bokit :</h3>
+        <p>Poulet boucané • Viande hachée • Morue<br>Saucisse • Jambon / fromage<br>Rougail saucisses • Végétarien</p></div>
+      <div class="complet">Complet + 2,50 € :<br>2 viandes au choix + fromage et œuf</div>
+    </div>
+  </div>
+
+  <!-- Colonne droite -->
+  <div class="col" style="left:642px;width:542px">
+    <div class="card parch"><div class="noise"></div>
+      <div class="h" style="width:360px" data-brush data-o='{"seed":17}'><div class="ic svg" data-svg="flower"></div><span class="t">Les Bo'kaz</span></div>
+      <div class="plat"><div class="top"><b>Assiette poulet boucané</b><span class="pill">15 €</span></div><span class="desc">Cuisses de poulet boucané, frites de patates douces, aloco, pikliz et riz créole</span></div>
+      <div class="plat"><div class="top"><b>Rougail saucisses</b><span class="pill">12,50 €</span></div><span class="desc">Servi avec riz créole</span></div>
+    </div>
+    <div class="card parch"><div class="noise"></div>
+      <div class="h" data-brush data-o='{"seed":31}'><div class="ic svg" data-svg="flower"></div><span class="t">Desserts</span></div>
+      <div class="badge"><span class="big">3 €</span><span class="sm">pièce</span></div>
+      <div class="list">
+        <div><span class="svg" data-svg="flower"></span>Mont blanc</div><div><span class="svg" data-svg="flower"></span>Moelleux chocolat</div>
+        <div><span class="svg" data-svg="flower"></span>Ananas renversé</div><div><span class="svg" data-svg="flower"></span>Gâteau coco</div>
+        <div><span class="svg" data-svg="flower"></span>Banane renversée</div><div><span class="svg" data-svg="flower"></span>Beignets de plantain</div>
+      </div>
+    </div>
+    <div class="card parch"><div class="noise"></div>
+      <div class="h" data-brush data-o='{"seed":41}'><div class="ic svg" data-svg="flower"></div><span class="t">Jus frais</span></div>
+      <div class="badge" style="right:-6px;top:-22px"><span class="big" style="font-size:32px">3,50 €</span></div>
+      <div class="list" style="grid-template-columns:auto">
+        <div><span class="svg" data-svg="flower"></span>Mangue / Passion</div>
+        <div><span class="svg" data-svg="flower"></span>Goyave</div>
+      </div>
+    </div>
+  </div>
+  <div class="abs svg" style="left:648px;top:1388px;width:290px;transform:rotate(-6deg)" data-svg="bokit"></div>
+  <div class="abs svg" style="left:922px;top:1400px;width:120px;transform:rotate(8deg)" data-svg="fries"></div>
+  <div class="abs svg" style="left:1046px;top:1372px;width:136px" data-svg="juice"></div>
+  <div class="abs svg" style="left:1004px;top:1532px;width:96px;transform:rotate(-10deg)" data-svg="mango"></div>
+  <!-- Panneau bois -->
+  <div class="abs wood" style="left:66px;top:1500px;width:540px;height:98px;transform:rotate(-2deg);display:flex;align-items:center;justify-content:center;gap:14px;white-space:nowrap">
+    <span class="nail" style="left:12px;top:12px"></span><span class="nail" style="right:12px;top:12px"></span>
+    <span class="hand" style="font-size:46px;color:#2b0f02">Fait maison avec amour</span>
+    <span class="svg" style="width:44px" data-svg="heart" data-o='{"color":"#2b0f02"}'></span></div>
+  <div class="abs svg" style="left:560px;top:1458px;width:96px" data-svg="hibiscus" data-o='{"color":"red","seed":23}'></div>
+
+  <!-- Pied -->
+  <div class="abs foot">
+    <div class="svg" style="width:46px" data-svg="flower"></div>
+    <span>Sur place</span><span class="h2">ou</span><span>À emporter</span>
+    <div class="svg" style="width:46px" data-svg="flower"></div>
+  </div>
+</div>
+<script src="assets.js"></script>
+<script>BK.hydrate();</script>
+</body></html>

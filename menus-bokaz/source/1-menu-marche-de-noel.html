@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Bo'kaz – Menu du Marché de Noël</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.p1{background:linear-gradient(180deg,#8fd0ff 0%,#cdeeff 7%,#fff3d9 18%,#fde6ba 62%,#f2c987 100%)}
+.bokeh{position:absolute;inset:0}
+/* Titre */
+.title{left:150px;top:250px;width:960px;height:122px;transform:rotate(-1.5deg)}
+.title .t{font-family:'Kaushan Script';font-size:76px;color:#fff;text-shadow:0 4px 0 #6d0710,0 6px 10px rgba(0,0,0,.35);white-space:nowrap}
+.title .t .noel{font-size:92px;color:#ffd84a;text-shadow:0 4px 0 #7a3b00,0 6px 10px rgba(0,0,0,.35)}
+.ribbon{left:330px;top:366px;width:580px;height:52px;border-radius:30px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#ffe680,#ffc21a 60%,#e8a200);border:3px solid #7a3b00;box-shadow:0 5px 10px rgba(80,40,0,.35);
+  font-weight:800;font-size:27px;color:var(--brown)}
+/* Panneau principal */
+.panel{left:176px;top:432px;width:1040px;height:1000px;padding:12px 26px 0 26px}
+.cols{display:flex;gap:22px}
+.left{width:688px}
+.right{width:278px;position:relative}
+.sec{height:70px;width:380px;margin:2px 0 6px -8px;justify-content:flex-start;padding-left:30px;gap:12px}
+.sec .ic{width:50px;flex:none}
+.sec .t{font-family:'Kaushan Script';font-size:52px;color:#fff;text-shadow:0 3px 0 rgba(90,0,0,.45);line-height:1}
+.rows .row{font-size:27.5px;height:43px}
+.rows .pill{font-size:26px;min-width:112px}
+.choices{margin-top:8px;border-radius:40px;padding:10px 30px 12px;text-align:center;
+  background:radial-gradient(ellipse at center,#fff6b8,#ffd84a 70%,#f5b800);border:3px solid #d49a00;box-shadow:0 4px 10px rgba(120,70,0,.3)}
+.choices h3{font-family:'Kaushan Script';font-weight:400;font-size:32px;line-height:1.1}
+.choices p{font-weight:700;font-size:23.5px;line-height:1.3}
+.complet{margin-top:8px;border-radius:14px;height:46px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#e3262f,#a10d16);color:#fff;font-weight:800;font-size:24px;box-shadow:0 3px 6px rgba(90,0,0,.35)}
+.bokaz-sec{margin:8px auto 8px;width:500px;height:72px;justify-content:center;gap:18px}
+.bokaz-sec .t{font-family:'Kaushan Script';font-size:58px;color:#fff;text-shadow:0 3px 0 rgba(90,0,0,.45)}
+.plat{display:flex;align-items:center;gap:22px;font-weight:700;font-size:27px;line-height:1.25}
+.plat .d{flex:1;text-align:center}
+.plat .pill{font-size:34px;padding:2px 22px;min-width:150px}
+/* Panneau bois */
+.sign{position:absolute;left:4px;top:8px;width:270px;height:132px;transform:rotate(-5deg);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.sign .h{font-family:'Caveat Brush';font-size:44px;line-height:.95;color:#2b0f02;text-align:center}
+.acc{position:absolute;left:0;top:268px;width:278px;padding:16px 14px 16px 22px;transform:rotate(2deg)}
+.acc h4{font-family:'Caveat Brush';font-weight:400;font-size:29px;line-height:1.05;text-align:center;margin-bottom:8px}
+.acc li{list-style:none;font-family:'Caveat Brush';font-size:32px;line-height:1.3;white-space:nowrap;display:flex;gap:10px;align-items:center}
+.acc li b{font-family:'Roboto Slab';font-weight:900;color:var(--green);font-size:28px}
+/* Cartes desserts/jus */
+.card{top:1446px;height:196px;padding:10px 20px}
+.card .head{display:flex;align-items:center;gap:16px;position:relative;height:64px}
+.card .sec2{height:60px;width:320px;justify-content:center}
+.card .sec2 .t{font-family:'Kaushan Script';font-size:46px;color:#fff;text-shadow:0 3px 0 rgba(90,0,0,.45)}
+.badge{position:absolute;right:-4px;top:-34px;width:100px;height:100px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 40% 35%,#fff4a8,#ffcd2a 55%,#e8a200);border:4px solid #7a3b00;box-shadow:0 5px 10px rgba(80,40,0,.35);
+  font-family:'Bree Serif';color:var(--brown);line-height:1}
+.badge .big{font-size:40px}.badge .sm{font-size:22px}
+.list{display:grid;gap:2px 16px;margin-top:8px}
+.list div{display:flex;align-items:center;gap:9px;font-weight:700;font-size:22px;white-space:nowrap;line-height:1.45}
+.list .svg{width:28px;flex:none}
+.footer{left:0;right:0;top:1648px;text-align:center;font-family:'Kaushan Script';font-size:70px;color:var(--brown);
+  text-shadow:0 0 12px #fff8e0,0 0 22px #fff8e0}
+</style></head>
+<body><div class="poster p1">
+  <div class="bokeh" data-bokeh data-o='{"n":70,"seed":4,"minR":5,"maxR":34,"zones":[[0,10,14,90],[86,10,100,95],[0,0,100,16],[20,90,80,100]]}'></div>
+
+  <!-- Guirlande -->
+  <div class="abs svg" style="left:0;top:-14px;width:1240px" data-svg="lights" data-o='{"w":1240,"sag":34,"n":22,"h":110}'></div>
+
+  <!-- Palmes en fond (haut) -->
+  <div class="abs svg" style="left:-90px;top:-30px;width:340px;transform:rotate(-20deg)" data-svg="palm" data-o='{"len":420,"seed":21,"bend":0.2}'></div>
+  <div class="abs svg" style="left:1010px;top:150px;width:300px;transform:scaleX(-1) rotate(-10deg)" data-svg="palm" data-o='{"len":380,"seed":5,"bend":0.25}'></div>
+
+  <!-- En-tête -->
+  <div class="abs logo" style="left:36px;top:30px;width:218px;height:218px"></div>
+  <div class="abs wordmark" style="left:300px;top:46px;font-size:178px">Bo'kaz</div>
+  <div class="abs svg" style="left:370px;top:2px;width:118px;transform:rotate(-14deg)" data-svg="chef"></div>
+  <div class="abs svg" style="left:718px;top:24px;width:140px;transform:rotate(18deg)" data-svg="santa"></div>
+  <div class="abs svg" style="left:888px;top:62px;width:330px" data-svg="chalet"></div>
+
+  <!-- Sapin à gauche -->
+  <div id="tree" class="abs" style="left:0;top:0;width:240px;height:1754px"></div>
+
+  <!-- Titre -->
+  <div class="abs title" data-brush data-o='{"seed":12,"c1":"#e8262e","c2":"#9e0b14"}'>
+    <div class="t">Menu du Marché de <span class="noel">Noël</span></div>
+  </div>
+  <div class="abs ribbon">Saveurs des Îles&nbsp;&nbsp;•&nbsp;&nbsp;Esprit de Noël</div>
+
+  <!-- Panneau principal -->
+  <div class="abs panel parch"><div class="noise"></div>
+    <div class="cols">
+      <div class="left">
+        <div class="sec" data-brush data-o='{"seed":3}'><div class="ic svg" data-svg="flower"></div><span class="t">Entrées</span></div>
+        <div class="rows">
+          <div class="row"><span class="n">Accras de morue</span><span class="dots"></span><span class="pill">4 € les 6</span></div>
+          <div class="row"><span class="n">Samoussas bœuf</span><span class="dots"></span><span class="pill">3 € les 3</span></div>
+          <div class="row"><span class="n">Wings boucanés</span><span class="dots"></span><span class="pill">4,50 € les 6</span></div>
+        </div>
+        <div class="sec" style="margin-top:10px" data-brush data-o='{"seed":8}'><div class="ic svg" data-svg="flower"></div><span class="t">Bokits</span></div>
+        <div class="rows">
+          <div class="row"><span class="n">Bokit seul</span><span class="dots"></span><span class="pill">8 €</span></div>
+          <div class="row"><span class="n">Bokit + accompagnement</span><span class="dots"></span><span class="pill">10 €</span></div>
+          <div class="row"><span class="n">Big bokit seul</span><span class="dots"></span><span class="pill">10 €</span></div>
+          <div class="row"><span class="n">Big bokit + accompagnement</span><span class="dots"></span><span class="pill">12 €</span></div>
+          <div class="row"><span class="n">Bokit végétarien</span><span class="dots"></span><span class="pill">8 €</span></div>
+          <div class="row"><span class="n">Bokit végétarien + accompagnement</span><span class="dots"></span><span class="pill">10 €</span></div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="sign wood"><span class="nail" style="left:10px;top:10px"></span><span class="nail" style="right:10px;top:10px"></span>
+          <div class="h">Fait maison<br>avec amour</div>
+          <div class="svg" style="width:40px;margin-top:2px" data-svg="heart" data-o='{"color":"#2b0f02"}'></div></div>
+        <div class="svg abs" style="left:66px;top:148px;width:170px;transform:rotate(-8deg)" data-svg="bokit"></div>
+        <div class="svg abs" style="left:-8px;top:150px;width:70px" data-svg="hibiscus" data-o='{"color":"yellow","seed":7,"rot":30}'></div>
+        <div class="acc parch"><div class="noise"></div>
+          <h4>Les accompagnements<br>au choix :</h4>
+          <ul><li><b>✓</b>Patates douces</li><li><b>✓</b>Frites classiques</li><li><b>✓</b>Aloco</li></ul>
+        </div>
+        <div class="svg abs" style="left:196px;top:448px;width:92px" data-svg="hibiscus" data-o='{"color":"red","seed":4}'></div>
+      </div>
+    </div>
+    <div class="choices">
+      <h3>Les choix de bokit :</h3>
+      <p>Poulet boucané, Viande hachée, Morue, Saucisse, Jambon / fromage,<br>Rougail saucisses, Jambon de Noël, Végétarien</p>
+    </div>
+    <div class="complet">Complet + 2,50 € : 2 viandes au choix + fromage et œuf</div>
+    <div class="bokaz-sec" data-brush data-o='{"seed":17}'>
+      <div class="svg" style="width:54px" data-svg="flower"></div><span class="t">Bo'kaz</span><div class="svg" style="width:54px" data-svg="flower"></div>
+    </div>
+    <div class="plat"><div class="d">Cuisses de poulet boucané / frites de patates douces /<br>aloco / pikliz / riz créole</div><span class="pill">15 €</span></div>
+    <div class="plat" style="margin-top:8px"><div class="d">Rougail saucisses / riz créole</div><span class="pill">12,50 €</span></div>
+  </div>
+
+  <!-- Desserts -->
+  <div class="abs card parch" style="left:176px;width:600px"><div class="noise"></div>
+    <div class="head"><div class="sec2" data-brush data-o='{"seed":31}'><span class="t">Desserts</span></div>
+      <div class="badge"><span class="big">3 €</span><span class="sm">pièce</span></div></div>
+    <div class="list" style="grid-template-columns:auto auto">
+      <div><span class="svg" data-svg="flower"></span>Mont blanc</div><div><span class="svg" data-svg="flower"></span>Moelleux chocolat</div>
+      <div><span class="svg" data-svg="flower"></span>Ananas renversé</div><div><span class="svg" data-svg="flower"></span>Gâteau coco</div>
+      <div><span class="svg" data-svg="flower"></span>Banane renversée</div><div><span class="svg" data-svg="flower"></span>Beignets de banane plantain</div>
+    </div>
+  </div>
+  <!-- Jus -->
+  <div class="abs card parch" style="left:790px;width:426px"><div class="noise"></div>
+    <div class="head"><div class="sec2" style="width:260px" data-brush data-o='{"seed":41}'><span class="t">Jus frais</span></div>
+      <div class="badge"><span class="big" style="font-size:33px">3,50 €</span></div></div>
+    <div class="list" style="grid-template-columns:auto">
+      <div><span class="svg" data-svg="flower"></span>Mangue / Passion</div>
+      <div><span class="svg" data-svg="flower"></span>Goyave</div>
+    </div>
+  </div>
+  <div class="abs svg" style="left:1100px;top:1540px;width:118px" data-svg="juice"></div>
+  <div class="abs svg" style="left:985px;top:1654px;width:124px;transform:rotate(-8deg)" data-svg="mango"></div>
+  <div class="abs svg" style="left:1120px;top:1672px;width:96px" data-svg="passion"></div>
+
+  <!-- Pied de page -->
+  <div class="abs svg" style="left:-24px;top:1618px;width:160px;transform:rotate(-6deg)" data-svg="gift" data-o='{"color":"gold"}'></div>
+  <div class="abs svg" style="left:112px;top:1650px;width:120px;transform:rotate(5deg)" data-svg="gift" data-o='{"color":"red"}'></div>
+  <div class="abs footer">Joyeux Noël à tous !
+    <span class="svg" style="display:inline-block;width:58px;vertical-align:-4px" data-svg="heart" data-o='{"color":"#3b1607","sw":7}'></span></div>
+</div>
+<script src="assets.js"></script>
+<script>
+// Sapin de Noël décoratif côté gauche
+(function(){
+  const t=document.getElementById('tree'); let h='';
+  const X=58;
+  for(let i=0;i<12;i++){
+    const y=320+i*80, len=92+i*15;
+    h+=`<div class="abs svg" style="left:${X}px;top:${y}px;width:${len}px;transform-origin:0 50%;transform:rotate(${22+i%2*6}deg)" data-svg="pine" data-o='{"len":${len*1.4},"seed":${i+3},"needle":44,"density":1.8}'></div>`;
+    h+=`<div class="abs svg" style="left:${X-len}px;top:${y}px;width:${len}px;transform-origin:100% 50%;transform:scaleX(-1) rotate(${22+i%2*6}deg)" data-svg="pine" data-o='{"len":${len*1.4},"seed":${i+30},"needle":44,"density":1.8}'></div>`;
+    h+=`<div class="abs svg" style="left:${X-10}px;top:${y+30}px;width:${len*0.8}px;transform-origin:0 50%;transform:rotate(8deg)" data-svg="pine" data-o='{"len":${len*1.2},"seed":${i+60},"needle":40,"density":1.8}'></div>`;
+  }
+  const cols=['red','gold','red','gold','red','white'];
+  const balls=[[96,420],[30,500],[132,560],[70,650],[150,720],[20,760],[110,830],[60,930],[150,960],[20,1040],[100,1080]];
+  balls.forEach((b,i)=>{h+=`<div class="abs svg" style="left:${b[0]}px;top:${b[1]}px;width:${44+(i%3)*8}px" data-svg="bauble" data-o='{"color":"${cols[i%cols.length]}"}'></div>`;});
+  h+=`<div class="abs svg" style="left:2px;top:258px;width:118px" data-svg="star"></div>`;
+  h+=`<div class="abs svg" style="left:-30px;top:1150px;width:190px" data-svg="hibiscus" data-o='{"color":"red","seed":2}'></div>`;
+  h+=`<div class="abs svg" style="left:60px;top:1290px;width:120px" data-svg="hibiscus" data-o='{"color":"red","seed":6,"rot":20}'></div>`;
+  t.innerHTML=h;
+})();
+BK.hydrate();
+</script>
+</body></html>

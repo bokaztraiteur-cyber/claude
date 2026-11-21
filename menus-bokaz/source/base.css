@@ -1,0 +1,69 @@
+@font-face{font-family:'Lobster';src:url(fonts/lobster-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Kaushan Script';src:url(fonts/kaushan-script-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Caveat Brush';src:url(fonts/caveat-brush-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Bree Serif';src:url(fonts/bree-serif-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Pacifico';src:url(fonts/pacifico-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Yellowtail';src:url(fonts/yellowtail-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Oswald';src:url(fonts/oswald-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Oswald';src:url(fonts/oswald-latin-700-normal.woff2) format('woff2');font-weight:700}
+@font-face{font-family:'Roboto Slab';src:url(fonts/roboto-slab-latin-400-normal.woff2) format('woff2');font-weight:400}
+@font-face{font-family:'Roboto Slab';src:url(fonts/roboto-slab-latin-700-normal.woff2) format('woff2');font-weight:700}
+@font-face{font-family:'Roboto Slab';src:url(fonts/roboto-slab-latin-800-normal.woff2) format('woff2');font-weight:800}
+@font-face{font-family:'Roboto Slab';src:url(fonts/roboto-slab-latin-900-normal.woff2) format('woff2');font-weight:900}
+
+:root{
+  --brown:#3b1607; --brown2:#5a2410; --red:#d7141f; --red-d:#9e0b14; --gold:#ffc21a; --gold-d:#c98a00;
+  --cream:#fff6e2; --parch:#fbeccb; --green:#1b7a3a; --orange:#f07c12;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1240px;height:1754px;background:#fff}
+.poster{width:1240px;height:1754px;position:relative;overflow:hidden;font-family:'Roboto Slab',serif;color:var(--brown)}
+.abs{position:absolute}
+.svg svg{width:100%;height:auto;display:block;overflow:visible}
+
+/* Logo rond */
+.logo{border-radius:50%;background:url(img/logo-bokaz.png) center/104% no-repeat #f5a623;
+  box-shadow:0 0 0 9px #fff, 0 0 0 14px #f4b223, 0 10px 26px rgba(60,20,0,.45)}
+
+/* Wordmark Bo'kaz */
+.wordmark{font-family:'Lobster',cursive;color:var(--brown);line-height:1;white-space:nowrap;
+  -webkit-text-stroke:16px #fff6dc;paint-order:stroke fill;filter:drop-shadow(0 8px 6px rgba(60,20,0,.35))}
+
+/* Bannière pinceau */
+[data-brush]{position:relative;display:flex;align-items:center;justify-content:center}
+.brush-bg{position:absolute;inset:0;z-index:0;filter:drop-shadow(0 4px 4px rgba(80,0,0,.3))}
+[data-brush]>*:not(.brush-bg){position:relative;z-index:1}
+
+.script{font-family:'Kaushan Script',cursive}
+.hand{font-family:'Caveat Brush',cursive}
+
+/* Lignes de menu */
+.row{display:flex;align-items:baseline;gap:10px;font-weight:700;line-height:1.15}
+.row .n{white-space:nowrap}
+.row .dots{flex:1;border-bottom:4px dotted rgba(90,36,16,.55);transform:translateY(-6px);min-width:20px}
+.pill{display:inline-flex;align-items:center;justify-content:center;font-family:'Bree Serif',serif;color:#fff;white-space:nowrap;
+  background:linear-gradient(180deg,#ef2a33,#b50d17);border-radius:14px;padding:2px 16px;
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.35),0 3px 5px rgba(90,0,0,.35)}
+
+/* Parchemin */
+.parch{background:
+   radial-gradient(ellipse at center, rgba(255,250,235,.95) 0%, rgba(253,240,210,.95) 55%, rgba(236,206,150,.95) 100%);
+  border-radius:22px;box-shadow:inset 0 0 40px rgba(160,100,30,.35),0 8px 22px rgba(80,40,0,.3)}
+.noise{position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:.55;border-radius:inherit;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .38  0 0 0 0 .15  0 0 0 .22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* Panneau bois */
+.wood{background:
+   repeating-linear-gradient(178deg, rgba(90,40,10,.0) 0 9px, rgba(90,40,10,.18) 9px 11px, rgba(255,230,180,.08) 11px 18px),
+   linear-gradient(180deg,#d9a165,#b9773d 60%,#a2622c);
+  border:4px solid #6b3410;border-radius:10px;box-shadow:0 8px 16px rgba(60,20,0,.4), inset 0 0 18px rgba(80,30,0,.35)}
+.nail{position:absolute;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#eee,#666 70%)}
+
+/* Madras */
+.madras{background-color:#ffb703;background-image:
+  repeating-linear-gradient(45deg, rgba(214,30,30,.85) 0 16px, transparent 16px 40px, rgba(255,110,0,.75) 40px 50px, transparent 50px 72px),
+  repeating-linear-gradient(-45deg, rgba(214,30,30,.55) 0 16px, transparent 16px 40px, rgba(255,110,0,.5) 40px 50px, transparent 50px 72px),
+  repeating-linear-gradient(45deg, transparent 0 60px, rgba(10,110,50,.75) 60px 63px, transparent 63px 72px),
+  repeating-linear-gradient(-45deg, transparent 0 60px, rgba(10,110,50,.75) 60px 63px, transparent 63px 72px)}
+
+.gold-text{background:linear-gradient(180deg,#fff3b0 0%,#ffd23f 45%,#e39b00 100%);-webkit-background-clip:text;background-clip:text;color:transparent}

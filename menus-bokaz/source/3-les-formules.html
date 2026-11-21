@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Bo'kaz – Les Formules</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.p3{background:
+   radial-gradient(ellipse at 50% 18%, rgba(255,250,200,.9) 0%, rgba(255,230,120,0) 45%),
+   radial-gradient(ellipse at 50% 60%, rgba(0,0,0,0) 40%, rgba(170,40,0,.45) 100%),
+   repeating-conic-gradient(from 0deg at 50% 18%, #ffcf2e 0deg 6deg, #ffb612 6deg 12deg)}
+.wm3{font-family:'Lobster';font-size:128px;color:var(--brown);line-height:1;-webkit-text-stroke:14px #fff6dc;paint-order:stroke fill;filter:drop-shadow(0 6px 5px rgba(60,20,0,.35))}
+.ttl{left:80px;top:194px;width:1080px;height:152px;transform:rotate(-1.5deg)}
+.ttl .t{font-family:'Kaushan Script';font-size:118px;color:#fff;line-height:1;text-shadow:0 5px 0 #6d0710,0 8px 14px rgba(0,0,0,.35)}
+.sub{left:290px;top:350px;width:660px;height:58px;border-radius:32px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#3b8f3f,#1b6a2c);border:4px solid #fff6dc;box-shadow:0 6px 12px rgba(0,0,0,.3);
+  font-weight:900;font-size:31px;color:#fff6dc;letter-spacing:.5px}
+.hook{left:1010px;top:30px;width:200px;height:200px;transform:rotate(12deg)}
+.hook .in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Bree Serif';color:#fff;line-height:1;text-align:center}
+.hook .a{font-size:24px}.hook .b{font-size:58px;text-shadow:0 3px 0 rgba(0,0,0,.25)}.hook .c{font-size:22px}
+/* Cartes formules */
+.fcard{position:absolute;width:560px;height:318px;border-radius:24px;background:linear-gradient(180deg,#fffaf0,#fbecc8);
+  border:4px solid #7a3b00;box-shadow:0 10px 22px rgba(80,20,0,.35);overflow:visible}
+.fcard .fh{position:absolute;left:-14px;top:-18px;width:420px;height:76px;justify-content:flex-start;padding-left:34px}
+.fcard .fh .t{font-family:'Kaushan Script';font-size:42px;color:#fff;line-height:1;text-shadow:0 3px 0 rgba(90,0,0,.45);white-space:nowrap}
+.save{position:absolute;right:-12px;top:-16px;background:linear-gradient(180deg,#2f9e44,#1b6a2c);color:#fff;font-family:'Bree Serif';font-size:25px;
+  padding:6px 14px;border-radius:12px;transform:rotate(6deg);box-shadow:0 4px 8px rgba(0,0,0,.3);border:3px solid #fff}
+.ill{position:absolute;left:10px;top:60px;width:270px;height:250px}
+.inc{position:absolute;left:288px;top:64px;width:262px;list-style:none}
+.inc li{font-weight:700;font-size:22.5px;line-height:1.2;padding:3px 0;display:flex;gap:8px;align-items:flex-start}
+.inc li b{color:var(--red);font-weight:900;font-size:26px;line-height:1}
+.inc li .svg{width:22px;flex:none;margin-top:3px}
+.pr{position:absolute;right:-12px;bottom:-16px;width:142px;height:142px}
+.pr .v{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Bree Serif';font-size:31px;color:var(--red-d);line-height:1}
+.old{position:absolute;right:138px;bottom:16px;font-size:19px;font-weight:700;color:#6b3a1a;text-align:right;line-height:1.15}
+.old s{font-size:24px;text-decoration-color:var(--red);text-decoration-thickness:3px}
+.tagv{position:absolute;white-space:nowrap;background:#2f9e44;color:#fff;font-weight:900;font-size:18px;padding:3px 10px;border-radius:10px;border:2px solid #fff}
+/* Pied */
+.complet{left:44px;top:1514px;width:1152px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:14px;
+  background:linear-gradient(180deg,#e3262f,#a10d16);color:#fff;font-weight:800;font-size:27px;box-shadow:0 5px 10px rgba(90,0,0,.35);border:3px solid #fff6dc}
+.complet b{font-family:'Bree Serif';font-weight:400;font-size:32px;color:#ffe066}
+.infos{left:44px;top:1582px;width:1152px;height:104px;padding:10px 22px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.infos div{text-align:center;line-height:1.25}
+.infos h5{font-family:'Caveat Brush';font-weight:400;font-size:32px;color:var(--red-d);line-height:1.1}
+.infos p{font-weight:700;font-size:20px}
+.base{left:0;right:0;top:1700px;text-align:center;font-weight:800;font-size:24px;color:#fff6dc;text-shadow:0 2px 4px rgba(0,0,0,.4)}
+</style></head>
+<body><div class="poster p3">
+  <!-- Décor -->
+  <div class="abs svg" style="left:-110px;top:420px;width:300px;transform:rotate(70deg)" data-svg="palm" data-o='{"len":360,"seed":12}'></div>
+  <div class="abs svg" style="left:1060px;top:420px;width:300px;transform:scaleX(-1) rotate(70deg)" data-svg="palm" data-o='{"len":360,"seed":14}'></div>
+
+  <!-- En-tête -->
+  <div class="abs logo" style="left:44px;top:34px;width:168px;height:168px"></div>
+  <div class="abs wm3" style="left:240px;top:52px">Bo'kaz</div>
+  <div class="abs svg" style="left:236px;top:22px;width:88px;transform:rotate(-16deg)" data-svg="chef"></div>
+  <div class="abs svg" style="left:640px;top:40px;width:130px" data-svg="hibiscus" data-o='{"color":"red","seed":3}'></div>
+  <div class="abs svg" style="left:740px;top:96px;width:86px" data-svg="hibiscus" data-o='{"color":"pink","seed":9,"rot":20}'></div>
+  <div class="abs hook"><div class="svg" data-svg="burst" data-o='{"c1":"#ff5a4a","c2":"#c8101c","stroke":"#fff6dc"}'></div>
+    <div class="in"><span class="a">Jusqu'à</span><span class="b">-2 €</span><span class="c">par formule</span></div></div>
+
+  <div class="abs ttl" data-brush data-o='{"seed":22,"c1":"#e8262e","c2":"#9e0b14"}'><span class="t">Les Formules</span></div>
+  <div class="abs sub">Plus gourmand… et moins cher !</div>
+
+  <!-- 1 Formule Bokit -->
+  <div class="fcard" style="left:44px;top:448px">
+    <div class="fh" data-brush data-o='{"seed":1}'><span class="t">Formule Bokit</span></div>
+    <div class="save">-1 €</div>
+    <div class="ill">
+      <div class="abs svg" style="left:0;top:58px;width:210px" data-svg="bokit"></div>
+      <div class="abs svg" style="left:150px;top:10px;width:82px;transform:rotate(8deg)" data-svg="fries"></div>
+      <div class="abs svg" style="left:196px;top:30px;width:84px" data-svg="juice"></div>
+    </div>
+    <ul class="inc"><li><span class="svg" data-svg="flower"></span>Bokit au choix</li><li><b>+</b>Accompagnement</li><li><b>+</b>Jus frais</li></ul>
+    <div class="old">au lieu de<br><s>13,50 €</s></div>
+    <div class="pr"><div class="svg" data-svg="burst"></div><div class="v">12,50 €</div></div>
+  </div>
+
+  <!-- 2 Formule Big Bokit -->
+  <div class="fcard" style="left:636px;top:448px">
+    <div class="fh" data-brush data-o='{"seed":2}'><span class="t">Formule Big Bokit</span></div>
+    <div class="save">-1 €</div>
+    <div class="ill">
+      <div class="abs svg" style="left:-10px;top:40px;width:240px" data-svg="bokit" data-o='{"seed":5}'></div>
+      <span class="tagv" style="left:6px;top:20px;background:#d7141f">BIG</span>
+      <div class="abs svg" style="left:170px;top:14px;width:76px;transform:rotate(8deg)" data-svg="fries"></div>
+      <div class="abs svg" style="left:204px;top:40px;width:78px" data-svg="juice" data-o='{"fruit":"passion","c1":"#ffe066","c2":"#ffa600"}'></div>
+    </div>
+    <ul class="inc"><li><span class="svg" data-svg="flower"></span>Big bokit au choix</li><li><b>+</b>Accompagnement</li><li><b>+</b>Jus frais</li></ul>
+    <div class="old">au lieu de<br><s>15,50 €</s></div>
+    <div class="pr"><div class="svg" data-svg="burst"></div><div class="v">14,50 €</div></div>
+  </div>
+
+  <!-- 3 Formule Végé -->
+  <div class="fcard" style="left:44px;top:806px">
+    <div class="fh" data-brush data-o='{"seed":3,"c1":"#3fae4f","c2":"#1b6a2c"}'><span class="t">Formule Végé</span></div>
+    <div class="save">-1 €</div>
+    <div class="ill">
+      <div class="abs svg" style="left:0;top:58px;width:210px" data-svg="bokit" data-o='{"seed":7}'></div>
+      <span class="tagv" style="left:6px;top:26px">100 % VÉGÉ</span>
+      <div class="abs svg" style="left:150px;top:10px;width:82px;transform:rotate(8deg)" data-svg="fries"></div>
+      <div class="abs svg" style="left:196px;top:30px;width:84px" data-svg="juice" data-o='{"c1":"#ffb3a0","c2":"#f0605a"}'></div>
+    </div>
+    <ul class="inc"><li><span class="svg" data-svg="flower"></span>Bokit végétarien</li><li><b>+</b>Accompagnement</li><li><b>+</b>Jus frais</li></ul>
+    <div class="old">au lieu de<br><s>13,50 €</s></div>
+    <div class="pr"><div class="svg" data-svg="burst"></div><div class="v">12,50 €</div></div>
+  </div>
+
+  <!-- 4 Formule Gourmande -->
+  <div class="fcard" style="left:636px;top:806px">
+    <div class="fh" data-brush data-o='{"seed":4}'><span class="t">Formule Gourmande</span></div>
+    <div class="save">-1,50 €</div>
+    <div class="ill">
+      <div class="abs svg" style="left:-6px;top:28px;width:190px" data-svg="bokit" data-o='{"seed":11}'></div>
+      <div class="abs svg" style="left:178px;top:6px;width:84px" data-svg="juice"></div>
+      <div class="abs svg" style="left:20px;top:150px;width:120px;transform:rotate(-4deg)" data-svg="cake"></div>
+      <div class="abs svg" style="left:136px;top:120px;width:70px;transform:rotate(8deg)" data-svg="fries"></div>
+    </div>
+    <ul class="inc"><li><span class="svg" data-svg="flower"></span>Bokit au choix</li><li><b>+</b>Accompagnement</li><li><b>+</b>Jus frais</li><li><b>+</b>Dessert au choix</li></ul>
+    <div class="old" style="bottom:10px">au lieu de<br><s>16,50 €</s></div>
+    <div class="pr" style="bottom:-26px"><div class="svg" data-svg="burst"></div><div class="v">15 €</div></div>
+  </div>
+
+  <!-- 5 Box Apéro -->
+  <div class="fcard" style="left:44px;top:1164px">
+    <div class="fh" data-brush data-o='{"seed":5,"c1":"#ff8a1a","c2":"#d24a00"}'><span class="t">Box Apéro</span></div>
+    <div class="save">-1,50 €</div>
+    <div class="ill">
+      <div class="abs svg" style="left:-6px;top:40px;width:280px" data-svg="apero"></div>
+      <span class="tagv" style="left:150px;top:8px;background:#ff7a1a">À partager !</span>
+    </div>
+    <ul class="inc"><li><span class="svg" data-svg="flower"></span>6 accras de morue</li><li><b>+</b>3 samoussas bœuf</li><li><b>+</b>6 wings boucanés</li></ul>
+    <div class="old">au lieu de<br><s>11,50 €</s></div>
+    <div class="pr"><div class="svg" data-svg="burst"></div><div class="v">10 €</div></div>
+  </div>
+
+  <!-- 6 Formule Bo'kaz -->
+  <div class="fcard" style="left:636px;top:1164px">
+    <div class="fh" data-brush data-o='{"seed":6,"c1":"#7a3b00","c2":"#3b1607"}'><span class="t">Formule Bo'kaz</span></div>
+    <div class="save">-2 €</div>
+    <div class="ill">
+      <div class="abs svg" style="left:-8px;top:52px;width:250px" data-svg="plate"></div>
+      <div class="abs svg" style="left:200px;top:10px;width:76px" data-svg="juice" data-o='{"fruit":"passion","c1":"#ffe066","c2":"#ffa600"}'></div>
+      <div class="abs svg" style="left:170px;top:150px;width:96px" data-svg="cake"></div>
+    </div>
+    <ul class="inc"><li><span class="svg" data-svg="flower"></span>Assiette<br>poulet boucané</li><li><b>+</b>Jus frais</li><li><b>+</b>Dessert au choix</li></ul>
+    <div class="old" style="bottom:10px">au lieu de<br><s>21,50 €</s></div>
+    <div class="pr" style="bottom:-26px"><div class="svg" data-svg="burst"></div><div class="v">19,50 €</div></div>
+  </div>
+
+  <!-- Pied -->
+  <div class="abs complet"><b>Complet + 2,50 €</b> sur tous les bokits : 2 viandes au choix + fromage et œuf</div>
+  <div class="abs infos parch"><div class="noise"></div>
+    <div><h5>Accompagnements</h5><p>Patates douces • Frites • Aloco</p></div>
+    <div><h5>Jus frais</h5><p>Mangue / Passion • Goyave</p></div>
+    <div><h5>Desserts</h5><p>Mont blanc, moelleux chocolat, gâteau coco…</p></div>
+  </div>
+  <div class="abs base">Bo'kaz&nbsp;&nbsp;✿&nbsp;&nbsp;Saveurs des Îles&nbsp;&nbsp;✿&nbsp;&nbsp;Fait maison avec amour</div>
+</div>
+<script src="assets.js"></script>
+<script>BK.hydrate();</script>
+</body></html>

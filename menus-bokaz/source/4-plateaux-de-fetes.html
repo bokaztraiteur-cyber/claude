@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Bo'kaz – Plateaux de fêtes</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.p4{background:radial-gradient(ellipse at 50% 35%,#8a0f1c 0%,#5c0712 45%,#2b0307 100%);color:var(--brown)}
+.bokeh{position:absolute;inset:0}
+.goldtxt{background:linear-gradient(180deg,#fff6c2 0%,#ffd75a 40%,#d4a017 70%,#a87400 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.wm4{font-family:'Lobster';font-size:112px;line-height:1.1;filter:drop-shadow(0 4px 0 #3b0006) drop-shadow(0 8px 10px rgba(0,0,0,.5))}
+.t1{left:0;right:0;top:300px;text-align:center;font-family:'Kaushan Script';font-size:92px;line-height:1.05;filter:drop-shadow(0 4px 0 #3b0006)}
+.t1 small{display:block;font-size:58px;color:#fff3d6;-webkit-text-fill-color:#fff3d6}
+.band{left:170px;top:478px;width:900px;height:70px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#e3262f,#a10d16);border-top:4px solid #e6b422;border-bottom:4px solid #e6b422;
+  font-family:'Oswald';font-weight:700;font-size:42px;letter-spacing:6px;color:#fff6dc;box-shadow:0 8px 18px rgba(0,0,0,.45)}
+.band:before,.band:after{content:'';position:absolute;top:8px;width:46px;height:46px;background:#a10d16;transform:rotate(45deg);z-index:-1}
+.band:before{left:-22px}.band:after{right:-22px}
+.occ{left:0;right:0;top:560px;text-align:center;font-weight:700;font-size:24px;color:#ffd75a;letter-spacing:.4px}
+.occ i{font-style:normal;color:#fff6dc;padding:0 8px}
+.list{position:absolute;left:70px;top:612px;width:1100px;display:flex;flex-direction:column;gap:14px}
+.pl{position:relative;height:142px;border-radius:22px;display:flex;align-items:center;gap:22px;padding:0 26px 0 12px;
+  background:linear-gradient(180deg,#fffaf0,#f7e6bd);border:4px solid #d4a017;box-shadow:0 8px 18px rgba(0,0,0,.4), inset 0 0 0 2px #fff6dc}
+.pl .im{width:178px;flex:none;margin-top:6px}
+.pl .tx{flex:1}
+.pl .tx b{display:block;font-weight:800;font-size:33px;line-height:1.1}
+.pl .tx span{display:block;font-size:22px;line-height:1.3;color:#6b3a1a;margin-top:4px}
+.pl .qty{font-family:'Caveat Brush';font-size:34px;color:var(--red-d);white-space:nowrap;text-align:center;line-height:1}
+.pl .qty small{display:block;font-size:22px;color:#8a5a2a}
+.medal{width:150px;height:92px;flex:none;border-radius:20px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(180deg,#ef2a33,#a10d16);border:3px solid #e6b422;box-shadow:0 5px 10px rgba(80,0,0,.4);
+  font-family:'Bree Serif';font-size:46px;color:#fff;line-height:1}
+.pl.star{background:linear-gradient(180deg,#b3121f,#7a0812);border-color:#ffd75a}
+.pl.star .tx b{color:#ffe680}.pl.star .tx span{color:#ffe9c4}.pl.star .qty{color:#fff3d6}.pl.star .qty small{color:#ffd75a}
+.pl.star .medal{background:linear-gradient(180deg,#fff3b0,#ffcf2e 55%,#d49a00);color:#7a0812;border-color:#fff6dc}
+.flag{position:absolute;right:-14px;top:-20px;background:linear-gradient(180deg,#ffe680,#ffc21a);color:#7a0812;font-weight:900;font-size:20px;
+  padding:6px 16px;border-radius:12px;border:3px solid #7a0812;transform:rotate(4deg);box-shadow:0 4px 8px rgba(0,0,0,.35)}
+.how{left:70px;top:1408px;width:1100px}
+.how h3{text-align:center;font-family:'Kaushan Script';font-weight:400;font-size:52px;line-height:1;margin-bottom:12px;filter:drop-shadow(0 3px 0 #3b0006)}
+.steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.step{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:18px;background:rgba(255,246,220,.08);border:2px solid rgba(230,180,34,.7)}
+.step .n{width:56px;height:56px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bree Serif';font-size:34px;color:#7a0812;
+  background:radial-gradient(circle at 40% 35%,#fff6c2,#ffd23f 55%,#d49a00)}
+.step p{font-weight:700;font-size:22px;line-height:1.25;color:#fff6dc}
+.step p b{color:#ffd75a}
+.end{left:0;right:0;top:1618px;text-align:center;font-family:'Kaushan Script';font-size:82px;filter:drop-shadow(0 4px 0 #3b0006)}
+</style></head>
+<body><div class="poster p4">
+  <div class="bokeh" data-bokeh data-o='{"n":90,"seed":7,"minR":4,"maxR":30,"color":"255,205,90"}'></div>
+  <div id="spark" class="abs" style="inset:0"></div>
+
+  <!-- Guirlande de sapin -->
+  <div id="garland" class="abs" style="left:0;top:0;width:1240px;height:300px"></div>
+
+  <!-- En-tête -->
+  <div class="abs logo" style="left:520px;top:66px;width:200px;height:200px;box-shadow:0 0 0 9px #fff6dc,0 0 0 15px #d4a017,0 12px 28px rgba(0,0,0,.6)"></div>
+  <div class="abs wm4 goldtxt" style="left:120px;top:110px">Bo'kaz</div>
+  <div class="abs svg" style="left:270px;top:70px;width:108px;transform:rotate(16deg)" data-svg="santa"></div>
+  <div class="abs" style="left:770px;top:122px;font-family:'Kaushan Script';font-size:52px;line-height:1.1;color:#fff3d6;filter:drop-shadow(0 3px 0 #3b0006)">Saveurs<br>des Îles</div>
+  <div class="abs svg" style="left:960px;top:150px;width:110px" data-svg="hibiscus" data-o='{"color":"red","seed":5}'></div>
+
+  <div class="abs t1"><span class="goldtxt">Vos fêtes</span><small>aux saveurs des Îles</small></div>
+  <div class="abs band">PLATEAUX À COMMANDER</div>
+  <div class="abs occ">Réveillon<i>✦</i>Noël<i>✦</i>Nouvel An<i>✦</i>Repas d'entreprise<i>✦</i>Anniversaires</div>
+
+  <div class="list">
+    <div class="pl"><div class="im svg" data-svg="platter" data-o='{"kind":"accras","seed":3}'></div>
+      <div class="tx"><b>Plateau Accras de morue</b><span>Croustillants et parfumés, parfaits pour l'apéritif</span></div>
+      <div class="qty">30<small>pièces</small></div><div class="medal">18 €</div></div>
+    <div class="pl"><div class="im svg" data-svg="platter" data-o='{"kind":"samoussas","seed":4}'></div>
+      <div class="tx"><b>Plateau Samoussas bœuf</b><span>Dorés et bien garnis</span></div>
+      <div class="qty">30<small>pièces</small></div><div class="medal">27 €</div></div>
+    <div class="pl"><div class="im svg" data-svg="platter" data-o='{"kind":"wings","seed":5}'></div>
+      <div class="tx"><b>Plateau Wings boucanés</b><span>Fumés à la créole, façon boucané</span></div>
+      <div class="qty">30<small>pièces</small></div><div class="medal">20 €</div></div>
+    <div class="pl star"><div class="flag">★ Le plus généreux</div><div class="im svg" data-svg="platter" data-o='{"kind":"mix","seed":6}'></div>
+      <div class="tx"><b>Plateau Créole Mix</b><span>20 accras + 20 samoussas + 20 wings boucanés</span></div>
+      <div class="qty">60<small>pièces</small></div><div class="medal">45 €</div></div>
+    <div class="pl"><div class="im svg" data-svg="platter" data-o='{"kind":"desserts","seed":7}'></div>
+      <div class="tx"><b>Plateau Douceurs des Îles</b><span>Mont blanc, ananas renversé, gâteau coco…</span></div>
+      <div class="qty">12<small>desserts</small></div><div class="medal">30 €</div></div>
+  </div>
+
+  <div class="abs how">
+    <h3 class="goldtxt">Comment commander ?</h3>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><p>Choisissez vos<br><b>plateaux</b></p></div>
+      <div class="step"><span class="n">2</span><p>Commandez au stand<br><b>48 h à l'avance</b></p></div>
+      <div class="step"><span class="n">3</span><p>Récupérez…<br>et <b>régalez-vous !</b></p></div>
+    </div>
+  </div>
+
+  <div class="abs svg" style="left:-10px;top:1580px;width:150px;transform:rotate(-8deg)" data-svg="gift" data-o='{"color":"gold"}'></div>
+  <div class="abs svg" style="left:110px;top:1624px;width:110px;transform:rotate(6deg)" data-svg="gift" data-o='{"color":"green"}'></div>
+  <div class="abs svg" style="left:1020px;top:1600px;width:120px" data-svg="hibiscus" data-o='{"color":"red","seed":11}'></div>
+  <div class="abs svg" style="left:1110px;top:1640px;width:130px;transform:rotate(10deg)" data-svg="gift" data-o='{"color":"red"}'></div>
+  <div class="abs end goldtxt">Joyeuses fêtes !</div>
+</div>
+<script src="assets.js"></script>
+<script>
+(function(){
+  // Guirlande de sapin + boules suspendues
+  const g=document.getElementById('garland'); let h='';
+  for(let i=0;i<9;i++){
+    const x=-120+i*160, y=-20+(i%2)*14;
+    h+=`<div class="abs svg" style="left:${x}px;top:${y}px;width:260px;transform:rotate(${i%2?6:-6}deg)" data-svg="pine" data-o='{"len":300,"seed":${i+2},"needle":44,"density":2.2,"bend":0.08}'></div>`;
+  }
+  const B=[[22,62,'gold'],[452,44,'red'],[1000,34,'white'],[1098,92,'red'],[1180,48,'gold']];
+  B.forEach(([x,l,c],i)=>{
+    h+=`<div class="abs" style="left:${x+24}px;top:30px;width:2px;height:${l}px;background:#d4a017"></div>`;
+    h+=`<div class="abs svg" style="left:${x}px;top:${l+14}px;width:${50+(i%3)*10}px" data-svg="bauble" data-o='{"color":"${c}"}'></div>`;
+  });
+  h+=`<div class="abs svg" style="left:-10px;top:150px;width:100px" data-svg="star"></div>`;
+  h+=`<div class="abs svg" style="left:1150px;top:180px;width:80px" data-svg="star"></div>`;
+  g.innerHTML=h;
+  // Scintillements
+  const s=document.getElementById('spark'); let k='';
+  [[90,300,40],[1150,320,34],[60,560,28],[1190,600,30],[40,1000,26],[1200,1100,30],[160,1380,24],[1080,1380,26],[600,250,22]].forEach(([x,y,w])=>{k+=`<div class="abs svg" style="left:${x}px;top:${y}px;width:${w}px" data-svg="sparkle"></div>`;});
+  s.innerHTML=k;
+})();
+BK.hydrate();
+</script>
+</body></html>
